@@ -1,0 +1,224 @@
+/* News Section Styling */
+.news-section {
+  padding: 3rem 10%;
+  background-color: #f9f9f9; /* Light background to make the news stand out */
+  margin-top: 60px;
+}
+
+.news-heading {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.news-heading::after {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background-color: #3498db; /* Blue underline for heading */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* News Grid for Responsive Layout */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: start;
+  padding: 2rem;
+  background-color: #f3f4f6;
+}
+
+/* Individual News Card Styling */
+.news-card {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  height: 550px; /* Set a fixed height to ensure all cards are the same size */
+  display: flex;
+  flex-direction: column; /* Ensure content is stacked vertically */
+  justify-content: space-between; /* Evenly space the content */
+  margin: 0px auto;
+}
+
+.news-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.news-card:hover .news-image::before {
+  opacity: 0.5;
+}
+
+/* News Image Styling */
+.news-image {
+  width: 100%;
+  height: 220px; /* Fixed height for the image */
+  object-fit: cover;
+  position: relative;
+}
+
+.news-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* News Content Section */
+.news-content {
+  padding: 1.5rem;
+  flex-grow: 1; /* Ensure the content section takes up the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.news-title {
+  font-size: 1.6rem;
+  color: #34495e;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  transition: color 0.4s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  line-clamp: 3; /* Standard property */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Show ellipsis (...) */
+}
+
+.news-title:hover {
+  color: #3498db;
+}
+
+/* Description Styling */
+.news-description {
+  font-size: 1rem;
+  color: #424747;
+  margin-bottom: 1rem;
+  max-height: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* "Read More" Button Styling */
+.news-readmore {
+  font-size: 1rem;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.4s ease;
+  position: relative;
+}
+
+.news-readmore::after {
+  content: "→";
+  margin-left: 5px;
+  font-size: 1.2rem;
+  transition: margin-left 0.4s ease;
+}
+
+.news-readmore:hover {
+  color: #34495e;
+}
+
+.news-readmore:hover::after {
+  margin-left: 12px;
+}
+
+/* Meta Information: Author and Date */
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #95a5a6;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.news-author {
+  font-style: italic;
+  color: #2c3e50;
+}
+
+.news-date {
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+/* Responsive for Tablet */
+@media (max-width: 1200px) {
+  .news-heading {
+    font-size: 2.2rem;
+    margin-top: 30px;
+  }
+
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+    gap: 1.5rem;
+  }
+
+  .news-card {
+    height: 600px;
+  }
+
+  .news-title {
+    font-size: 1.4rem;
+  }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .news-section {
+    padding: 2rem 5%; /* Reduce padding */
+  }
+
+  .news-heading {
+    font-size: 2rem;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1rem;
+    justify-content: center; /* Center the card */
+    align-items: center; /* Center items vertically */
+  }
+
+  .news-card {
+    height: auto;
+  }
+
+  .news-title {
+    font-size: 1.2rem;
+  }
+}

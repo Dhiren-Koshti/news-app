@@ -1,0 +1,59 @@
+.navbar {
+  background-color: #e0e0e0;
+  /* padding: 0.2rem 2rem;  */
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #061727 !important; /* Deep Gold color on hover */
+}
+
+.nav-link {
+  color: #2c3e50 !important; /* Dark Charcoal for nav links */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #3498db !important; /* Navy Blue for link hover */
+  text-decoration: none;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    padding: 0.2rem 2rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.9rem; /* Larger text for brand */
+    font-weight: 500; /* Bold font weight */
+    color: #2c3e50 !important; /* Dark Charcoal color */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+
+  .navbar-brand i {
+    margin-right: 5px;
+    font-size: 2rem; /* Larger icon for brand */
+  }
+
+  .nav-item {
+    margin-left: 1.3rem; /* Space between nav items */
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-link {
+    font-size: 1.08rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
