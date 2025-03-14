@@ -7,6 +7,6 @@ export default defineConfig({
   server: {
     port: process.env.PORT || 3000, // Use the Render-provided PORT or default to 3000
     host: "0.0.0.0", // Bind to 0.0.0.0 to expose the app
-    allowedHosts: ["news-app-1dw4.onrender.com"],
+    allowedHosts: ["https://news-app-3lv8.onrender.com/"],
   },
 });
